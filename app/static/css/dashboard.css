@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background: #08070d;
+    color: #ffffff;
+}
+
+.dashboard {
+    min-height: 100vh;
+
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+
+    padding: 28px 20px;
+
+    background: #0f0d17;
+
+    border-right: 1px solid #211e2b;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 42px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a {
+    padding: 13px 14px;
+
+    color: #858291;
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #181522;
+}
+
+nav a.active {
+    color: #ffffff;
+    background: #7657ff;
+}
+
+.logout-form {
+    margin-top: auto;
+}
+
+.logout-form button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #2b2737;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #858291;
+
+    cursor: pointer;
+}
+
+.main-content {
+    flex: 1;
+
+    padding: 36px;
+
+    max-width: 1400px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.topbar h1 {
+    margin-bottom: 8px;
+
+    font-size: 28px;
+}
+
+.topbar p {
+    color: #858291;
+}
+
+.balance-badge {
+    padding: 10px 16px;
+
+    background: #151220;
+
+    border: 1px solid #2a2637;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+}
+
+.session-card {
+    padding: 32px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #19152d,
+            #100d18
+        );
+
+    border: 1px solid #2b263d;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 24px;
+}
+
+.session-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.session-label {
+    color: #8c7aff;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.session-header h2 {
+    margin-top: 8px;
+
+    font-size: 30px;
+}
+
+.status {
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    background: rgba(80, 220, 140, 0.08);
+    color: #62db96;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.timer {
+    margin-top: 36px;
+
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.timer-label {
+    color: #777381;
+
+    margin-top: 4px;
+}
+
+.session-info {
+    display: flex;
+    gap: 60px;
+
+    margin-top: 32px;
+}
+
+.session-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.session-info span {
+    color: #777381;
+    font-size: 13px;
+}
+
+.session-info strong {
+    font-size: 17px;
+}
+
+.session-actions {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button {
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.primary-button {
+    border: none;
+
+    background: #7657ff;
+    color: white;
+}
+
+.secondary-button {
+    border: 1px solid #332f40;
+
+    background: transparent;
+    color: #c2bfca;
+}
+
+.content-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+}
+
+.panel {
+    padding: 24px;
+
+    background: #100e17;
+
+    border: 1px solid #24202f;
+
+    border-radius: 16px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.panel-header h3 {
+    font-size: 17px;
+}
+
+.panel-header button,
+.panel-header a {
+    border: none;
+
+    color: #9a83ff;
+
+    background: none;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.balance-value {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.panel p {
+    margin-top: 8px;
+
+    color: #777381;
+}
+
+.history-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #211e2b;
+
+    color: #b3afbb;
+}
+
+.history-row:last-child {
+    border-bottom: none;
+}
+
+.history-row strong {
+    color: #ffffff;
+}

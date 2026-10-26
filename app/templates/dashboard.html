@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Club - Личный кабинет</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/dashboard.css')}}">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                PC CLUB
+            </div>
+
+            <nav>
+                <a href="/dashboard">
+                    Главная
+                </a>
+
+                <a href="#">
+                    Мои сессии
+                </a>
+
+                <a href="#">
+                    Баланс
+                </a>
+
+                <a href="#">
+                    Тарифы
+                </a>
+
+                <a href="#">
+                    Профиль
+                </a>
+            </nav>
+
+            <form 
+                action="/logout"
+                method="post"
+                class="logout-form"
+            >
+                <button type="submit">
+                    Выйти
+                </button>
+            </form>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>
+                        Добро пожаловать, {{ user.username }}
+                    </h1>
+
+                    <p>
+                        Управление вашей игровой сессией
+                    </p>
+                </div>
+                <div class="balance-badge">
+                    {{ "%.2f"|format(user.balance) }} ₽
+                </div>
+            </header>
+
+            <section class="session-card">
+                <div class="session-header">
+                    <div>
+                        <span class="session-label">
+                            Текущая сессия
+                        </span>
+                        <h2>
+                            ПК-12
+                        </h2>
+                    </div>
+                    <div class="status">
+                        Активна
+                    </div>
+                </div>
+
+                <div class="timer">
+                    02:47:32
+                </div>
+                <div class="timer-label">
+                    Осталось времени
+                </div>
+
+                <div class="session-info">
+
+                    <div>
+                        <span>Тариф</span>
+                        <strong>3 часа</strong>
+
+                    </div>
+
+                    <div>
+                        <span>Стоимость</span>
+                        <strong>550 ₽</strong>
+                    </div>
+
+                </div>
+
+                <div class="session-actions">
+
+                    <button class="primary-button">
+                        Продлить время
+                    </button>
+
+                    <button class="secondary-button" id = "end-session">
+                        Завершить сессию
+                    </button>
+                    
+                </div>
+            </section>
+
+            <section class="content-grid">
+                <div class="panel">
+                    <div class="panel-header">
+
+                        <h3>Баланс</h3>
+
+                        <button>
+                            Пополнить
+                        </button>
+
+                    </div>
+
+                    <div class="balance-value">
+                        {{ "%.2f"|format(user.balance) }} ₽
+                    </div>
+
+                    <p>Доступно для оплаты игровых сессий</p>
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Последние сессии</h3>
+
+                        <a href="#">
+                            Все
+                        </a>
+                    </div>
+
+                    <div class="history-row">
+                        <span>ПК-12</span>
+                        <span>3 часа</span>
+                        <strong>550 ₽</strong>
+                    </div>
+
+                    <div class="history-row">
+                        <span>ПК-07</span>
+                        <span>2 часа</span>
+                        <strong>400 ₽</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/dashboard.js')}}"></script>
+</body>
+
+</html>
